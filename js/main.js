@@ -1,6 +1,8 @@
-var buttons = document.querySelectorAll("li")
-for(var i = 0; i < buttons.length; i++){
-  buttons[i].addEventListener("click", function(evt){
-    document.body.className = evt.target.className
-  })
+var buttons = $('li')
+
+function changeColor () {
+  const color = $(this).attr('class')
+  $('body').toggleClass(color)
 }
+
+buttons.on('click', changeColor)
